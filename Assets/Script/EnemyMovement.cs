@@ -13,14 +13,14 @@ public class EnemyMovement : MonoBehaviour
     private bool isRight = true;
 
     Vector3 direction;
-    [SerializeField] private Animator animator;
+    private Animator animator;
 
     private enum MovementState { ide, run}
 
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
-
+        animator = GetComponent<Animator>();
     }
 
     
