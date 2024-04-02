@@ -15,7 +15,9 @@ public class EnemyMovement : MonoBehaviour
     Vector3 direction;
     private Animator animator;
 
-    private enum MovementState { ide, run}
+    private PlayerHealth e;
+
+    private enum MovementState { ide, run, hit}
 
     void Start()
     {
@@ -64,9 +66,24 @@ public class EnemyMovement : MonoBehaviour
         {
             state = MovementState.ide;
         }
+
+        if (e != null)
+        {
+            state = MovementState.hit;
+            e = null;
+        }
+            
         animator.SetInteger("state", (int)state);
 
     }
 
-   
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        e = collision.GetComponent<PlayerHealth>();
+        if (e != null)
+        {
+            e.Hit(1);
+        }
+    }
+    
 }
