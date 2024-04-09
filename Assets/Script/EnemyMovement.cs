@@ -7,7 +7,7 @@ public class EnemyMovement : MonoBehaviour
     private Rigidbody2D rigidbody2D;
     [SerializeField] private float enemySpeed;
     
-    [SerializeField] private Transform player;
+    private Transform player;
 
     [SerializeField] private SpriteRenderer enemySpr;
     private bool isRight = true;
@@ -23,6 +23,12 @@ public class EnemyMovement : MonoBehaviour
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        GameObject target = GameObject.Find("Player");
+        if(target != null)
+        {
+            player = target.transform;
+        }
     }
 
     

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8528361439162719892}
+  - component: {fileID: 4932433859028994337}
   m_Layer: 0
   m_Name: rockGr2
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1558972236908125057}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0923, y: 0.04504838, z: 0.090218}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.1907448, y: 1.1907448, z: 1.1907448}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -39,6 +40,23 @@ Transform:
   - {fileID: 460205400800533332}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4932433859028994337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558972236908125057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a250f5b9350bf59458ae8b5dc5c96ada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 6633458441694206784, guid: 389476453fa13a741b8b1c0d1a581323, type: 3}
+  - {fileID: 6021239383004033489, guid: 7bd5fbd6f98eeb642a5220aff4b5d648, type: 3}
+  - {fileID: 7347292814726050101, guid: 266cd477d002c6f46a2f6dbd3d409e8c, type: 3}
+  - {fileID: 1229136715021223686, guid: 34e311f26ccb5fd409710398234fb031, type: 3}
 --- !u!1 &2153560104318478474
 GameObject:
   m_ObjectHideFlags: 0

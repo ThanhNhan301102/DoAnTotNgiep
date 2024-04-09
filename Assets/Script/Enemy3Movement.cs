@@ -9,13 +9,19 @@ public class Enemy3Movement : MonoBehaviour
 
     private bool isRight = true;
     [SerializeField] private float enemySpeed;
-    [SerializeField] private Transform player;
+    private Transform player;
     [SerializeField] private SpriteRenderer enemySpr;
     Vector3 direction;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        GameObject target = GameObject.Find("Player");
+        if (target != null)
+        {
+            player = target.transform;
+        }
     }
 
     
