@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8258869119198300153}
   - component: {fileID: 3317899838958661622}
   - component: {fileID: 927064404402383748}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpeed: 2
-  player: {fileID: 0}
   enemySpr: {fileID: 7526877317195680808}
 --- !u!114 &927064404402383748
 MonoBehaviour:

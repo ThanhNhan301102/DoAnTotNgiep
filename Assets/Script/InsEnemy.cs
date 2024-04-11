@@ -5,9 +5,11 @@ using UnityEngine;
 public class InsEnemy : MonoBehaviour
 {
     public List<GameObject> enemies;
+    [SerializeField] private float timestart;
+    [SerializeField] private float timeend;
     void Start()
     {
-        InvokeRepeating("RandomEnemy", 2, Random.Range(10, 50));
+        InvokeRepeating("RandomEnemy", 5, Random.Range(timestart, timeend));
     }
 
     void RandomEnemy()

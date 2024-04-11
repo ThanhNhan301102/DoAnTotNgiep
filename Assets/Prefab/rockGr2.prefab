@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8528361439162719892}
   - component: {fileID: 4932433859028994337}
-  m_Layer: 0
+  - component: {fileID: 2095254263416516631}
+  - component: {fileID: 5626191439003180965}
+  m_Layer: 6
   m_Name: rockGr2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,6 +59,65 @@ MonoBehaviour:
   - {fileID: 6021239383004033489, guid: 7bd5fbd6f98eeb642a5220aff4b5d648, type: 3}
   - {fileID: 7347292814726050101, guid: 266cd477d002c6f46a2f6dbd3d409e8c, type: 3}
   - {fileID: 1229136715021223686, guid: 34e311f26ccb5fd409710398234fb031, type: 3}
+  timestart: 60
+  timeend: 90
+--- !u!114 &2095254263416516631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558972236908125057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 678a93696f9d43040bf4d0eec8b10098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &5626191439003180965
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558972236908125057}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.22521585, y: -0.046367437}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0794864, y: 0.6688021}
+  m_EdgeRadius: 0
 --- !u!1 &2153560104318478474
 GameObject:
   m_ObjectHideFlags: 0
@@ -67,7 +128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4355224764533718415}
   - component: {fileID: 2715940081285891673}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: rock1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7086642069923143791}
   - component: {fileID: 2207838045529784408}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: rock1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8657853397286392651}
   - component: {fileID: 7032953191741177456}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: rock3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2109770209561321361}
   - component: {fileID: 4583686521220671749}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: rock3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -403,7 +464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8501885749021475898}
   - component: {fileID: 2245578816916516459}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: rock2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +548,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2994472041765450520}
   - component: {fileID: 4646871584529574162}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: rock2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -571,7 +632,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6247245345091125323}
   - component: {fileID: 5194408944610011423}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: rock2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -653,9 +714,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8528361439162719892}
     m_Modifications:
+    - target: {fileID: 1300670030041778436, guid: fc972598f67dfd34b8c7696c8675344d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2105406270212587669, guid: fc972598f67dfd34b8c7696c8675344d, type: 3}
       propertyPath: m_Name
       value: FireEffect2 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105406270212587669, guid: fc972598f67dfd34b8c7696c8675344d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4662460762623885752, guid: fc972598f67dfd34b8c7696c8675344d, type: 3}
       propertyPath: m_LocalScale.x
@@ -708,6 +777,10 @@ PrefabInstance:
     - target: {fileID: 4662460762623885752, guid: fc972598f67dfd34b8c7696c8675344d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9065724758671260134, guid: fc972598f67dfd34b8c7696c8675344d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
