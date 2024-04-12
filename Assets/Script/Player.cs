@@ -89,14 +89,6 @@ public class Player : MonoBehaviour
         if (horizontal != 0)
         {
             state = MovementState.walk;
-            //if (horizontal > 0 && !isRight)
-            //{
-                //Flip();
-            //}
-            //else if (horizontal < 0 && isRight)
-            //{
-                //Flip();
-            //}
         }
         else if(vertical != 0)
             state = MovementState.walk;

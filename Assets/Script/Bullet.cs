@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private float timeDestroy = 2f;
-    [SerializeField] private int damage;
+    private int damage = Weapon.damagewp;
     private void Start()
     {
         Destroy(this.gameObject, timeDestroy);

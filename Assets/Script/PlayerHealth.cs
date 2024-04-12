@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private int health;
+    [SerializeField] private int maxHealth;
+    [SerializeField] private int currentHealth;
     private float time = 2f;
     private float timer;
 
+    private void Start()
+    {
+        currentHealth = 0;
+    }
     private void Update()
     {
         if (timer > 0)
@@ -15,12 +20,19 @@ public class PlayerHealth : MonoBehaviour
     }
     public void Hit(int damage)
     {
-        if (health > 0 && timer <= 0)
+        if (currentHealth > 0 && timer <= 0)
         {
-            health -= damage;
+            currentHealth -= damage;
             timer = time;
         }
 
             
+    }
+    public void AddHealth(int val)
+    {
+        if(currentHealth < maxHealth)
+        {
+            currentHealth += val;
+        }
     }
 }
