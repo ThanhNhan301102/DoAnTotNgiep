@@ -481,8 +481,8 @@ MonoBehaviour:
   - {fileID: 6021239383004033489, guid: 7bd5fbd6f98eeb642a5220aff4b5d648, type: 3}
   - {fileID: 7347292814726050101, guid: 266cd477d002c6f46a2f6dbd3d409e8c, type: 3}
   - {fileID: 1229136715021223686, guid: 34e311f26ccb5fd409710398234fb031, type: 3}
-  timestart: 30
-  timeend: 60
+  timestart: 60
+  timeend: 120
 --- !u!114 &-5152806765986536805
 MonoBehaviour:
   m_ObjectHideFlags: 0
