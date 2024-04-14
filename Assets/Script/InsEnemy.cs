@@ -11,7 +11,7 @@ public class InsEnemy : MonoBehaviour
     void Start()
     {
         count = 0;
-        InvokeRepeating("RandomEnemy", 5, Random.Range(timestart, timeend));
+        InvokeRepeating("RandomEnemy", 30, Random.Range(timestart, timeend));
     }
 
     private void Update()

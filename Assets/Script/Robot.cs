@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Robot : MonoBehaviour
 {
@@ -12,7 +14,11 @@ public class Robot : MonoBehaviour
     private Vector3 direction;  //huong di
     private Transform exit;
     private bool isRight = true;
-    private bool flag = false;
+
+    private bool flag1 = false, flag2 = true, flag3 = false;
+    
+    [SerializeField] private GameObject canvas;
+    [SerializeField] private TextMeshProUGUI textMP1, textMP2, textMP3;
 
     private enum MovementState { ide, walk};
 
@@ -21,13 +27,36 @@ public class Robot : MonoBehaviour
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
-        exit = GameObject.Find("Exit").transform;
+        //exit = GameObject.Find("Exit").transform;
     }
 
     
     void Update()
     {
-        if(flag == false)
+            
+        if (GameMng.currentEnemy == GameMng.maxEnemy)
+        {
+            flag1 = true;
+            textMP1.enabled = false;
+        }
+      
+        RaycastHit2D hit = Physics2D.Raycast(rigidbody2D.position + Vector2.down * 0.5f, transform.right, 1.5f, LayerMask.GetMask("Player"));
+        if(hit.collider != null)
+        {
+            display();
+            if (flag1 == true && Input.GetKeyDown(KeyCode.X))
+            {
+                flag2 = false;
+            }
+        }
+        else
+        {
+            canvas.SetActive(false);
+        }
+        
+
+
+        if(flag2 == false)
         {
             direction = (exit.position - transform.position).normalized;
             Vector3 pos = transform.position + direction * speedRobot * Time.deltaTime;
@@ -35,12 +64,30 @@ public class Robot : MonoBehaviour
 
             if (Vector3.Distance(transform.position, exit.position) < 0.1f) //chenh lech khoang cach < 0.1f
             {
-                flag = true;
+                flag2 = true;
+                flag3 = true;
                 direction = new Vector3(0, 0, 0);             
             }
         }
-        
+
         UpdateAnimation();
+    }
+
+   
+
+    void display()
+    {
+        if(flag1 == false)
+        {           
+            canvas.SetActive(true);
+            textMP1.enabled = true;
+        }
+        else if(flag1 == true)
+        {          
+            canvas.SetActive(true);
+            textMP2.enabled = true;
+        }
+        
     }
 
     void Flip()
