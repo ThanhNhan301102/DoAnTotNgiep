@@ -16,7 +16,7 @@ public class InsEnemy : MonoBehaviour
 
     private void Update()
     {
-        if (count == 3)
+        if (count == 1)
             CancelInvoke("RandomEnemy");
     }
 
