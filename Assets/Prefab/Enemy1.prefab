@@ -137,6 +137,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  goldPrefab: {fileID: 4152307438663481571, guid: 9d113902721b2564c9f3c96788acb998, type: 3}
+  sprEnemy: {fileID: 8289875893849030350}
 --- !u!50 &8525801198031766221
 Rigidbody2D:
   serializedVersion: 4

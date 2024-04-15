@@ -13,4 +13,13 @@ public class RockGroup : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        PlayerHealth e = collision.GetComponent<PlayerHealth>();
+        if (e != null)
+        {
+            e.UnHit();
+        }
+    }
+
 }

@@ -91,5 +91,13 @@ public class EnemyMovement : MonoBehaviour
             e.Hit(1);
         }
     }
-    
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        e = collision.GetComponent<PlayerHealth>();
+        if(e != null)
+        {
+            e.UnHit();
+        }
+    }
 }

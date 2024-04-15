@@ -7,13 +7,22 @@ public class InsEnemy : MonoBehaviour
     public List<GameObject> enemies;
     [SerializeField] private float timestart;
     [SerializeField] private float timeend;
+    private int count;
     void Start()
     {
-        InvokeRepeating("RandomEnemy", 5, Random.Range(timestart, timeend));
+        count = 0;
+        InvokeRepeating("RandomEnemy", 30, Random.Range(timestart, timeend));
+    }
+
+    private void Update()
+    {
+        if (count == 1)
+            CancelInvoke("RandomEnemy");
     }
 
     void RandomEnemy()
     {
+        count++;
         int e = Random.Range(0, enemies.Count);
         GameObject newEnemy = Instantiate(enemies[e], transform.position, Quaternion.identity);
     }

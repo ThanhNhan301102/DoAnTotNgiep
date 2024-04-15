@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 176921247058276575}
   - component: {fileID: 6583890793811176449}
   - component: {fileID: 3959807640428543811}
+  - component: {fileID: -1253877230349050289}
   m_Layer: 0
   m_Name: wpR1
   m_TagString: Untagged
@@ -167,6 +168,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-1253877230349050289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921518352313708633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e19adc8a53f7844ea12aed632465936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 30
 --- !u!1 &9061232608273051629
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,7 +209,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -5, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2690437360909598400}
@@ -390,7 +404,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.3602941, g: 0.19849063, b: 0.074178204, a: 0.5019608}
+      maxColor: {r: 0.16470589, g: 0.35686275, b: 0.3254902, a: 0.5019608}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

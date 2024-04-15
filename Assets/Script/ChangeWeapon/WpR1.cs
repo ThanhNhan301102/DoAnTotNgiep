@@ -23,6 +23,7 @@ public class WpR1 : MonoBehaviour
         weapon.Add(r1);
         weapon.Add(r2);
         weapon.Add(r3);
+      
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
