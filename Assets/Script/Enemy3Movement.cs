@@ -12,6 +12,7 @@ public class Enemy3Movement : MonoBehaviour
     private Transform player;
     [SerializeField] private SpriteRenderer enemySpr;
     Vector3 direction;
+    private PlayerHealth e;
 
     void Start()
     {
@@ -49,6 +50,24 @@ public class Enemy3Movement : MonoBehaviour
         else if (direction.x > 0 && !isRight)
         {
             Flip();
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        e = collision.GetComponent<PlayerHealth>();
+        if (e != null)
+        {
+            e.Hit(1);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        e = collision.GetComponent<PlayerHealth>();
+        if (e != null)
+        {
+            e.UnHit();
         }
     }
 }

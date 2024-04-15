@@ -210,3 +210,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   goldPrefab: {fileID: 4152307438663481571, guid: 9d113902721b2564c9f3c96788acb998, type: 3}
+  sprEnemy: {fileID: 6217363858815202012}
