@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class GameMng : MonoBehaviour
 {
-    public static int golds;
-    [SerializeField] private int currentGold;
-
     public static int maxEnemy;
     [SerializeField] private int maxenemy;
 
@@ -15,14 +12,12 @@ public class GameMng : MonoBehaviour
 
     void Start()
     {
-        currentEnemy = 0;
-        golds = 0;
+        currentEnemy = 0;      
         maxEnemy = maxenemy;
     }
 
     private void Update()
-    {
-        currentGold = golds;
+    {      
         crEnemy = currentEnemy;
     }
 

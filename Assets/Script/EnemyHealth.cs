@@ -12,13 +12,15 @@ public class EnemyHealth : MonoBehaviour
     private Color colorHit, colorUnHit;
 
     private float timeChangeColor, timer;
+    [SerializeField] private Color colorDeath;
+    [SerializeField] private List<GameObject> deaths;
 
     private void Start()
     {
         colorHit = new Color32(174, 86, 86, 255);
         colorUnHit = sprEnemy.color;
         timer = -1.0f;
-        timeChangeColor = 0.1f;
+        timeChangeColor = 0.2f;
     }
 
     private void Update()
@@ -37,10 +39,17 @@ public class EnemyHealth : MonoBehaviour
         {
             flag = true;
             Destroy(gameObject);
-            GameObject newGold = Instantiate(goldPrefab, transform.position, Quaternion.identity);
+            Death();
             GameMng.currentEnemy++;
         }
             
+    }
+
+    void Death()
+    {
+        int index = Random.Range(0, deaths.Count);
+        GameObject obj = Instantiate(deaths[index], transform.position, Quaternion.identity);
+        obj.GetComponent<SpriteRenderer>().color = colorDeath;
     }
 
 }

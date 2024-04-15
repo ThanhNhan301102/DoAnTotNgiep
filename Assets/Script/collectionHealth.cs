@@ -9,8 +9,11 @@ public class collectionHealth : MonoBehaviour
         PlayerHealth player = collision.GetComponent<PlayerHealth>();
         if(player != null)
         {
-            player.AddHealth(1);
-            Destroy(gameObject);
+            if(player.currentHealth < player.maxHealth)
+            {
+                player.AddHealth(1);
+                Destroy(gameObject);
+            }          
         }
     }
 }
