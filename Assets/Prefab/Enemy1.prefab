@@ -137,7 +137,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  goldPrefab: {fileID: 4152307438663481571, guid: 9d113902721b2564c9f3c96788acb998, type: 3}
   sprEnemy: {fileID: 8289875893849030350}
   colorDeath: {r: 0.73333335, g: 0.3803922, b: 0.85098046, a: 1}
   deaths:

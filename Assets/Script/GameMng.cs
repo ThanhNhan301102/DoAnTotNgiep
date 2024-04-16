@@ -1,24 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameMng : MonoBehaviour
 {
     public static int maxEnemy;
     [SerializeField] private int maxenemy;
 
-    public static int currentEnemy;
-    [SerializeField] private int crEnemy;   //so enemy da tieu giet
+    public static int currentEnemy;   
+    [SerializeField] private TextMeshProUGUI textCountEn;
 
     void Start()
     {
         currentEnemy = 0;      
         maxEnemy = maxenemy;
     }
-
     private void Update()
-    {      
-        crEnemy = currentEnemy;
+    {
+        textCountEn.text = currentEnemy.ToString();
     }
+
 
 }

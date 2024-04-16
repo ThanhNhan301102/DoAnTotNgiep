@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int health;
-    [SerializeField] private GameObject goldPrefab;
+    
     private bool flag = false;
 
     [SerializeField] private SpriteRenderer sprEnemy;
@@ -14,6 +14,8 @@ public class EnemyHealth : MonoBehaviour
     private float timeChangeColor, timer;
     [SerializeField] private Color colorDeath;
     [SerializeField] private List<GameObject> deaths;
+
+    [SerializeField] private EnCount enCount;
 
     private void Start()
     {
@@ -35,12 +37,13 @@ public class EnemyHealth : MonoBehaviour
         timer = timeChangeColor;
         sprEnemy.color = colorHit;
         health -= damage;
-        if (health <= 0 && flag == false)
+        if (health <= 0)
         {
-            flag = true;
+            //flag = true;
             Destroy(gameObject);
             Death();
             GameMng.currentEnemy++;
+            //countEn.UpdateText(GameMng.currentEnemy);
         }
             
     }
