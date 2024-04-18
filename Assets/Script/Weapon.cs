@@ -14,12 +14,15 @@ public class Weapon : MonoBehaviour
     [SerializeField] private GameObject fireEffect;
     [SerializeField] private GameObject muzzle;
 
-    [SerializeField] public int damage;
-    public static int damagewp; //dam cua sung
+    [SerializeField] public int minDamage;
+    [SerializeField] public int maxDamage;
+    public static int minDamagewp; //dam cua sung
+    public static int maxDamagewp;
 
     private void Start()
     {
-        damagewp = damage;
+        minDamagewp = minDamage;
+        maxDamagewp = maxDamage;
         theScale = transform.localScale;
         timer = 0;
     }

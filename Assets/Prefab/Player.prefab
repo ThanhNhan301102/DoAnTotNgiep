@@ -104,7 +104,8 @@ MonoBehaviour:
   timeBtwFire: 1
   fireEffect: {fileID: 2105406270212587669, guid: 9d134e68726a17f45af52decea941c57, type: 3}
   muzzle: {fileID: 7348130485437658420, guid: 5b625988fb361514084dbd86dfe5f6c8, type: 3}
-  damage: 3
+  minDamage: 1
+  maxDamage: 5
 --- !u!1 &1139085149527729197
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,7 +340,8 @@ MonoBehaviour:
   timeBtwFire: 0.2
   fireEffect: {fileID: 2105406270212587669, guid: 9d134e68726a17f45af52decea941c57, type: 3}
   muzzle: {fileID: 7348130485437658420, guid: 5b625988fb361514084dbd86dfe5f6c8, type: 3}
-  damage: 1
+  minDamage: 1
+  maxDamage: 3
 --- !u!1 &3076604371602296497
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,7 +472,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01087904, y: -0.6573883}
+  m_Offset: {x: 0.015210867, y: -0.5999918}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -481,7 +483,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.29621124, y: 0.16401362}
+  m_Size: {x: 0.34839106, y: 0.2788067}
   m_EdgeRadius: 0
 --- !u!114 &1902008809814442855
 MonoBehaviour:
@@ -513,6 +515,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 0
   sprPlayer: {fileID: 831592059286727338}
+  healthBar: {fileID: 0}
 --- !u!58 &8472529925181404361
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -652,7 +655,8 @@ MonoBehaviour:
   timeBtwFire: 0.5
   fireEffect: {fileID: 2105406270212587669, guid: 9d134e68726a17f45af52decea941c57, type: 3}
   muzzle: {fileID: 7348130485437658420, guid: 5b625988fb361514084dbd86dfe5f6c8, type: 3}
-  damage: 2
+  minDamage: 1
+  maxDamage: 4
 --- !u!1 &4146455295937342258
 GameObject:
   m_ObjectHideFlags: 0

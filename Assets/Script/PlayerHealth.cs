@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private int maxHealth;
-    [SerializeField] private int currentHealth;   
+    public int maxHealth;
+    public int currentHealth;   
     private float time = 2f;
     private float timer;
 
     [SerializeField] private SpriteRenderer sprPlayer;
     private Color colorHit, colorUnHit;
 
+    [SerializeField] private HealthBar healthBar;
+
     private void Start()
     {
-        currentHealth = 0;
+        currentHealth = maxHealth;
+        healthBar.UpdateFillBar(currentHealth, maxHealth);
+
         colorUnHit = sprPlayer.color;
         colorHit = new Color32(174, 86, 86, 255);
     }
@@ -29,6 +33,7 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth > 0 && timer <= 0)
         {
             currentHealth -= damage;
+            healthBar.UpdateFillBar(currentHealth, maxHealth);
             timer = time;
         }           
     }
@@ -38,10 +43,8 @@ public class PlayerHealth : MonoBehaviour
         sprPlayer.color = colorUnHit;
     }
     public void AddHealth(int val)
-    {
-        if(currentHealth < maxHealth)
-        {
-            currentHealth += val;
-        }
+    {       
+        currentHealth += val;
+        healthBar.UpdateFillBar(currentHealth, maxHealth);
     }
 }

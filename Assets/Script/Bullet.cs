@@ -5,9 +5,10 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private float timeDestroy = 2f;
-    private int damage = Weapon.damagewp;
+    private int damage;
     private void Start()
     {
+        damage = Random.Range(Weapon.minDamagewp, Weapon.maxDamagewp);
         Destroy(this.gameObject, timeDestroy);
     }
 
@@ -16,6 +17,7 @@ public class Bullet : MonoBehaviour
         EnemyHealth e = collision.GetComponent<EnemyHealth>();
         if(e != null)
         {
+            
             e.Hit(damage);
             Destroy(gameObject);
         }
