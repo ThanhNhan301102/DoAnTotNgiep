@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class collectionHealth : MonoBehaviour
 {
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         PlayerHealth player = collision.GetComponent<PlayerHealth>();
@@ -11,6 +12,7 @@ public class collectionHealth : MonoBehaviour
         {
             if(player.currentHealth < player.maxHealth)
             {
+                
                 player.AddHealth(1);
                 Destroy(gameObject);
             }          

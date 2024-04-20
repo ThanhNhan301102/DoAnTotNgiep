@@ -19,6 +19,8 @@ public class Weapon : MonoBehaviour
     public static int minDamagewp; //dam cua sung
     public static int maxDamagewp;
 
+    [SerializeField] private AudioSource auWp;  //am thanh khi ban
+
     private void Start()
     {
         minDamagewp = minDamage;
@@ -32,6 +34,7 @@ public class Weapon : MonoBehaviour
         timer -= Time.deltaTime;
         if (Input.GetMouseButton(1) && timer < 0)
         { //nhan chuot phai
+            auWp.Play();
             FireBullet();
         }
     }

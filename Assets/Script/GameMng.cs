@@ -12,10 +12,13 @@ public class GameMng : MonoBehaviour
     public static int currentEnemy;   
     [SerializeField] private TextMeshProUGUI textCountEn;
 
+    [SerializeField] private AudioSource auBackGround;
+
     void Start()
     {
         currentEnemy = 0;      
         maxEnemy = maxenemy;
+        auBackGround.Play();
     }
     private void Update()
     {
