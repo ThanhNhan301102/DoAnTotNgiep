@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
     public SpriteRenderer spr;
     private enum MovementState { ide, walk, roll}
 
+    [SerializeField] private AudioSource playerRoll;
+    
     
     void Start()
     {
@@ -38,6 +40,7 @@ public class Player : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space) && rollTimer <= 0)
         {
+            playerRoll.Play();
             animator.SetBool("roll", true);
             playrSpeed += rollBoost;
             rollTimer = rollTime;
@@ -88,12 +91,17 @@ public class Player : MonoBehaviour
         
         if (horizontal != 0)
         {
-            state = MovementState.walk;
+            state = MovementState.walk;                     
         }
         else if(vertical != 0)
-            state = MovementState.walk;
+        {
+            state = MovementState.walk;          
+        }
         else
-            state = MovementState.ide;
+        {
+            state = MovementState.ide;                 
+        }
+            
         animator.SetInteger("state", (int)state);
     }
 }

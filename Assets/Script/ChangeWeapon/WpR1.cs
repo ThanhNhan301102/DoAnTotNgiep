@@ -27,9 +27,10 @@ public class WpR1 : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Player e = collision.GetComponent<Player>();
+        PlayerHealth e = collision.GetComponent<PlayerHealth>();
         if(e != null)
         {
+            e.touch.Play();
             for(int i=0; i<weapon.Count; i++)
             {
                 if (i == index)

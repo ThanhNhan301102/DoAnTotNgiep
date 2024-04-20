@@ -16,8 +16,8 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private Color colorDeath;
     [SerializeField] private List<GameObject> deaths;
 
-    [SerializeField] private EnCount enCount;   //file script
     private HealthBarEn healthBarEn;
+
 
     private void Start()
     {
@@ -46,7 +46,7 @@ public class EnemyHealth : MonoBehaviour
         healthBarEn.UpdateHealthBarEn(currentHealth, health);   //cap nhat thanh mau
 
         if (currentHealth <= 0)
-        {          
+        {
             Destroy(gameObject);
             Death();
             GameMng.currentEnemy++;         

@@ -14,6 +14,8 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private HealthBar healthBar;
 
+    public AudioSource touch;
+    [SerializeField] private AudioSource auHit;
     private void Start()
     {
         currentHealth = maxHealth;
@@ -32,6 +34,7 @@ public class PlayerHealth : MonoBehaviour
         sprPlayer.color = colorHit;
         if (currentHealth > 0 && timer <= 0)
         {
+            auHit.Play();
             currentHealth -= damage;
             healthBar.UpdateFillBar(currentHealth, maxHealth);
             timer = time;
@@ -43,7 +46,8 @@ public class PlayerHealth : MonoBehaviour
         sprPlayer.color = colorUnHit;
     }
     public void AddHealth(int val)
-    {       
+    {
+        touch.Play();
         currentHealth += val;
         healthBar.UpdateFillBar(currentHealth, maxHealth);
     }
