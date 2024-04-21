@@ -18,7 +18,6 @@ public class EnemyHealth : MonoBehaviour
 
     private HealthBarEn healthBarEn;
 
-
     private void Start()
     {
         colorHit = new Color32(174, 86, 86, 255);

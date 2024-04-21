@@ -14,16 +14,42 @@ public class GameMng : MonoBehaviour
 
     [SerializeField] private AudioSource auBackGround;
 
+    public static int display;   //kiem tra game ket thuc chua: 0 chua, 1 thang, 2 thua
+    [SerializeField] private TextMeshProUGUI victory;
+    [SerializeField] private TextMeshProUGUI defeat;
+    [SerializeField] private GameObject panel;  
+    private bool isVictory = false, isEndGame = false;
+
     void Start()
     {
+        display = 0;
         currentEnemy = 0;      
         maxEnemy = maxenemy;
         auBackGround.Play();
     }
     private void Update()
     {
-        textCountEn.text = currentEnemy.ToString();
+        textCountEn.text = currentEnemy.ToString() + " / " + maxEnemy.ToString();
+        if(currentEnemy == maxenemy && isVictory == false)
+        {
+            isVictory = true;
+            display = 1;
+        }
+        if (display != 0 && isEndGame == false)
+            Invoke("EndGame", 1.5f);
     }
 
-
+    private void EndGame()
+    {     
+        panel.SetActive(true);
+        if (display == 1)
+        {
+            victory.enabled = true;
+        }
+        else
+            defeat.enabled = true;
+        GameObject player = GameObject.Find("Player");
+        player.GetComponent<Collider2D>().enabled = false;
+        isEndGame = true;
+    }
 }

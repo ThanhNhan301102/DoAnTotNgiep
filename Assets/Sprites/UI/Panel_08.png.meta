@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cb9035f95d27bed45a149134865a06e8
+guid: 185d810947858af40a8c54c632b8f3c3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -108,28 +108,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Steampunk_UI_Dialogue_1_0
-      rect:
-        serializedVersion: 2
-        x: 1031
-        y: 189
-        width: 849
-        height: 707
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae83a67fcc4667f45ad2c3ae228d57f0
-      internalID: 136341749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -140,8 +119,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Steampunk_UI_Dialogue_1_0: 136341749
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

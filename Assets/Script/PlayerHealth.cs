@@ -9,13 +9,18 @@ public class PlayerHealth : MonoBehaviour
     private float time = 2f;
     private float timer;
 
-    [SerializeField] private SpriteRenderer sprPlayer;
+    [SerializeField] private SpriteRenderer sprPlayer;  //thay doi mau sac khi player bi sat thuong
     private Color colorHit, colorUnHit;
 
     [SerializeField] private HealthBar healthBar;
 
-    public AudioSource touch;
+    public AudioSource touch;   //am thanh
     [SerializeField] private AudioSource auHit;
+
+    [SerializeField] private Animator animatorPlayer;
+    [SerializeField] private List<GameObject> weapons;
+    private bool isDeath = false;
+    [SerializeField] private AudioSource auDeath;
     private void Start()
     {
         currentHealth = maxHealth;
@@ -28,6 +33,25 @@ public class PlayerHealth : MonoBehaviour
     {
         if (timer > 0)
             timer -= Time.deltaTime;
+
+        if(currentHealth == 0 && isDeath == false)
+        {
+            Death();
+            
+        }
+    }
+
+    void Death()    //player chet
+    {
+        GameMng.display = 2;
+        auDeath.Play();
+        isDeath = true;
+        animatorPlayer.SetTrigger("death");
+        for(int i=0; i<weapons.Count; i++)
+        {
+            weapons[i].SetActive(false);
+        }
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;  //nhan vat khong the di chuyen 
     }
     public void Hit(int damage)
     {
