@@ -32,7 +32,7 @@ public class Weapon : MonoBehaviour
     {
         RotateRun();
         timer -= Time.deltaTime;
-        if (Input.GetMouseButton(1) && timer < 0)
+        if (Input.GetMouseButton(1) && timer < 0 && ChucNangMenu.click == true)
         { //nhan chuot phai
             auWp.Play();
             FireBullet();
