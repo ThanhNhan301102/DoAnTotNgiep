@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameMng : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class GameMng : MonoBehaviour
     [SerializeField] private TextMeshProUGUI victory;
     [SerializeField] private TextMeshProUGUI defeat;
     [SerializeField] private GameObject panel;  
-    private bool isVictory = false, isEndGame = false;
+    private bool isEndGame = false;
 
     void Start()
     {
@@ -30,9 +31,8 @@ public class GameMng : MonoBehaviour
     private void Update()
     {
         textCountEn.text = currentEnemy.ToString() + " / " + maxEnemy.ToString();
-        if(currentEnemy == maxenemy && isVictory == false)
-        {
-            isVictory = true;
+        if(currentEnemy == maxenemy)
+        {       
             display = 1;
         }
         if (display != 0 && isEndGame == false)
@@ -51,5 +51,11 @@ public class GameMng : MonoBehaviour
         GameObject player = GameObject.Find("Player");
         player.GetComponent<Collider2D>().enabled = false;
         isEndGame = true;
+        Invoke("home", 5.0f);
+    }
+
+    void home()
+    {
+        SceneManager.LoadScene(0);
     }
 }
