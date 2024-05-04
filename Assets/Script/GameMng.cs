@@ -21,6 +21,10 @@ public class GameMng : MonoBehaviour
     [SerializeField] private GameObject panel;  
     private bool isEndGame = false;
 
+    public static bool isWin = false;
+    [SerializeField] private AudioSource auWin;
+    [SerializeField] private AudioSource auDeath;
+
     void Start()
     {
         display = 0;
@@ -36,7 +40,11 @@ public class GameMng : MonoBehaviour
             display = 1;
         }
         if (display != 0 && isEndGame == false)
+        {
+            isEndGame = true;
             Invoke("EndGame", 1.5f);
+        }
+            
     }
 
     private void EndGame()
@@ -45,12 +53,17 @@ public class GameMng : MonoBehaviour
         if (display == 1)
         {
             victory.enabled = true;
+            isWin = true;
+            auWin.Play();
         }
         else
+        {
             defeat.enabled = true;
+            auDeath.Play();
+        }
+            
         GameObject player = GameObject.Find("Player");
-        player.GetComponent<Collider2D>().enabled = false;
-        isEndGame = true;
+        player.GetComponent<Collider2D>().enabled = false;      
         Invoke("home", 5.0f);
     }
 

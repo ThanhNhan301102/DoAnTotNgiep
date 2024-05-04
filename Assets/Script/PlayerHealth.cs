@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private Animator animatorPlayer;
     [SerializeField] private List<GameObject> weapons;
     private bool isDeath = false;
-    [SerializeField] private AudioSource auDeath;
+    //[SerializeField] private AudioSource auDeath;
     private void Start()
     {
         currentHealth = maxHealth;
@@ -44,7 +44,7 @@ public class PlayerHealth : MonoBehaviour
     void Death()    //player chet
     {
         GameMng.display = 2;
-        auDeath.Play();
+        //auDeath.Play();
         isDeath = true;
         animatorPlayer.SetTrigger("death");
         for(int i=0; i<weapons.Count; i++)
