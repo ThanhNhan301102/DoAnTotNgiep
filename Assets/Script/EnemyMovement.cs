@@ -16,6 +16,7 @@ public class EnemyMovement : MonoBehaviour
     private Animator animator;
 
     private PlayerHealth e;
+    [SerializeField] private int damageEnemy;
 
     private enum MovementState { ide, run, hit}
 
@@ -23,6 +24,8 @@ public class EnemyMovement : MonoBehaviour
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        damageEnemy *= Setting.setEnemyDamage;
 
         GameObject target = GameObject.Find("Player");
         if(target != null)
@@ -88,7 +91,7 @@ public class EnemyMovement : MonoBehaviour
         e = collision.GetComponent<PlayerHealth>();
         if (e != null)
         {
-            e.Hit(1);
+            e.Hit(damageEnemy);
         }
     }
 

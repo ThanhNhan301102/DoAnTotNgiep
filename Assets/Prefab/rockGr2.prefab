@@ -61,6 +61,7 @@ MonoBehaviour:
   - {fileID: 1229136715021223686, guid: 34e311f26ccb5fd409710398234fb031, type: 3}
   timestart: 90
   timeend: 100
+  maxCount: 2
 --- !u!114 &2095254263416516631
 MonoBehaviour:
   m_ObjectHideFlags: 0

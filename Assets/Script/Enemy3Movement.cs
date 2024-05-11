@@ -14,8 +14,11 @@ public class Enemy3Movement : MonoBehaviour
     Vector3 direction;
     private PlayerHealth e;
 
+    [SerializeField] private int damageEnemy;
+
     void Start()
     {
+        damageEnemy *= Setting.setEnemyDamage;
         rb = GetComponent<Rigidbody2D>();
 
         GameObject target = GameObject.Find("Player");
@@ -58,7 +61,7 @@ public class Enemy3Movement : MonoBehaviour
         e = collision.GetComponent<PlayerHealth>();
         if (e != null)
         {
-            e.Hit(1);
+            e.Hit(damageEnemy);
         }
     }
 

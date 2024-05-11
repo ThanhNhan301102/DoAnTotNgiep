@@ -7,6 +7,7 @@ public class InsEnemy : MonoBehaviour
     public List<GameObject> enemies;
     [SerializeField] private float timestart;
     [SerializeField] private float timeend;
+    [SerializeField] private int maxCount;  //so lan khoi tao enemy
     private int count;
     void Start()
     {
@@ -16,7 +17,7 @@ public class InsEnemy : MonoBehaviour
 
     private void Update()
     {
-        if (count == 1)
+        if (count == maxCount)
             CancelInvoke("RandomEnemy");
     }
 

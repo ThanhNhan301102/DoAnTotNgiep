@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     private int damage;
     private void Start()
     {
-        damage = Random.Range(Weapon.minDamagewp, Weapon.maxDamagewp);
+        damage = Weapon.damageWp;
         Destroy(this.gameObject, timeDestroy);
     }
 
