@@ -6709,6 +6709,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1842574607}
     - target: {fileID: 3130871275054605774, guid: 19c9985b539bc784096c180fbfe81940, type: 3}
+      propertyPath: maxenemy
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130871275054605774, guid: 19c9985b539bc784096c180fbfe81940, type: 3}
       propertyPath: textCountEn
       value: 
       objectReference: {fileID: 215523175}

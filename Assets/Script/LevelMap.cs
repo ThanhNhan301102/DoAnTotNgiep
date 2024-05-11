@@ -8,6 +8,7 @@ public class LevelMap : MonoBehaviour
     private bool isOpen = false;
     [SerializeField] private GameObject iconLock;
     [SerializeField] private GameObject settingScreen;
+    [SerializeField] private GameObject instructionScreen;
 
     private void Update()
     {
@@ -33,8 +34,13 @@ public class LevelMap : MonoBehaviour
     {
         settingScreen.SetActive(true);
     }
+    public void instruction()
+    {
+        instructionScreen.SetActive(true);
+    }
     public void exit()
     {
         settingScreen.SetActive(false);
+        instructionScreen.SetActive(false);
     }
 }
