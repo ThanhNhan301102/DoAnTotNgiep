@@ -411,8 +411,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc8d5c59bcf6e8d47ad7093ff3156586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 2
+  enemySpeed: 3
   enemySpr: {fileID: 6217363858815202012}
+  damageEnemy: 1
 --- !u!114 &1858528555852417912
 MonoBehaviour:
   m_ObjectHideFlags: 0

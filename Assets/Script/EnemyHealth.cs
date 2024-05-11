@@ -6,8 +6,6 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int health;
     private int currentHealth;
-    
-    //private bool flag = false;
 
     [SerializeField] private SpriteRenderer sprEnemy;
 
@@ -20,6 +18,8 @@ public class EnemyHealth : MonoBehaviour
 
     private void Start()
     {
+        health *= Setting.setEnemyDamage;
+
         colorHit = new Color32(174, 86, 86, 255);
         colorUnHit = sprEnemy.color;
         timer = -1.0f;

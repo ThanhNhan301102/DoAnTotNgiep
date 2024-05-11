@@ -4247,6 +4247,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 49414810401939715, guid: e4db7f3c262efd54d8bb911ab1730e6a, type: 3}
+      propertyPath: damage
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 831592059286727338, guid: e4db7f3c262efd54d8bb911ab1730e6a, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4255,9 +4259,21 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1414050456}
+    - target: {fileID: 1902008809814442855, guid: e4db7f3c262efd54d8bb911ab1730e6a, type: 3}
+      propertyPath: playrSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3426200094803665058, guid: e4db7f3c262efd54d8bb911ab1730e6a, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195288717713055663, guid: e4db7f3c262efd54d8bb911ab1730e6a, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7528120164132369758, guid: e4db7f3c262efd54d8bb911ab1730e6a, type: 3}
+      propertyPath: damage
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8648754825589571108, guid: e4db7f3c262efd54d8bb911ab1730e6a, type: 3}
       propertyPath: m_Controller
@@ -4271,6 +4287,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1439800202}
+    - target: {fileID: 8739156711099149043, guid: e4db7f3c262efd54d8bb911ab1730e6a, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8739156711099149043, guid: e4db7f3c262efd54d8bb911ab1730e6a, type: 3}
       propertyPath: animatorPlayer
       value: 

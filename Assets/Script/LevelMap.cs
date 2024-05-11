@@ -7,6 +7,7 @@ public class LevelMap : MonoBehaviour
 {
     private bool isOpen = false;
     [SerializeField] private GameObject iconLock;
+    [SerializeField] private GameObject settingScreen;
 
     private void Update()
     {
@@ -27,5 +28,13 @@ public class LevelMap : MonoBehaviour
     }
     public void quit(){
         Application.Quit();
+    }
+    public void setting()
+    {
+        settingScreen.SetActive(true);
+    }
+    public void exit()
+    {
+        settingScreen.SetActive(false);
     }
 }

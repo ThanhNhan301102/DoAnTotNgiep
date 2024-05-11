@@ -271,8 +271,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc8d5c59bcf6e8d47ad7093ff3156586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 2
+  enemySpeed: 3
   enemySpr: {fileID: 1195961641242255076}
+  damageEnemy: 1
 --- !u!114 &8188232399474182700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff63e7aa21402e94586359ed0a9c6265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
+  health: 6
   sprEnemy: {fileID: 1195961641242255076}
   colorDeath: {r: 0.85098046, g: 0.39607847, b: 0.37647063, a: 1}
   deaths:

@@ -23,6 +23,7 @@ public class PlayerHealth : MonoBehaviour
     //[SerializeField] private AudioSource auDeath;
     private void Start()
     {
+        maxHealth *= Setting.setPlayerHealth;
         currentHealth = maxHealth;
         healthBar.UpdateFillBar(currentHealth, maxHealth);
 

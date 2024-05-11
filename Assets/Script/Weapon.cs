@@ -14,17 +14,17 @@ public class Weapon : MonoBehaviour
     [SerializeField] private GameObject fireEffect;
     [SerializeField] private GameObject muzzle;
 
-    [SerializeField] public int minDamage;
-    [SerializeField] public int maxDamage;
-    public static int minDamagewp; //dam cua sung
-    public static int maxDamagewp;
+    [SerializeField] public int damage;
+    //[SerializeField] public int maxDamage;
+    public static int damageWp; //dam cua sung
+    //public static int maxDamagewp;
 
     [SerializeField] private AudioSource auWp;  //am thanh khi ban
 
     private void Start()
     {
-        minDamagewp = minDamage;
-        maxDamagewp = maxDamage;
+        damage *= Setting.setWeaponDamage;
+        damageWp = damage;
         theScale = transform.localScale;
         timer = 0;
     }
